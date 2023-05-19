@@ -16,8 +16,9 @@ ${cart_button}               nav-cart-count-container
 ${delete_button}             //input[@data-action='delete']
 
 *** Keywords ***
-Open ${browser} to login page
+Open browser of
     [Documentation]  Browser can be -> (headless)chrome , (headless)firefox
+    [Arguments]  ${browser}
     Open Browser  ${login_url}  ${browser}
 
 End session and close browser
@@ -37,7 +38,7 @@ Wait for the element
 
 Login with test account
     [Tags]  SMOKE
-    Run Keyword And Ignore Error  Click Element  sp-cc-accept
+    Allow Cookies for Amazon
     Enter mail address and continue  ${valid_username}
     Enter password and sign in  ${valid_password}
     
@@ -58,3 +59,5 @@ Clear Chart
         Sleep  2
     END
 
+Allow Cookies for Amazon
+    Run Keyword And Ignore Error  Click Element  sp-cc-accept

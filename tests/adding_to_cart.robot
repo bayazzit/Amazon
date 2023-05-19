@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  Login Test
 Library  SeleniumLibrary
-Suite Setup  Open chrome to login page
+Suite Setup  Open browser of  chrome
 Suite Teardown  End session and close browser
 Resource  ../PO/generic.robot
 Resource  ../PO/login_page_mail.robot

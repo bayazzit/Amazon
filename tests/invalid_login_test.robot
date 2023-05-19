@@ -2,7 +2,7 @@
 Documentation  Invalid Login Test
 Library  SeleniumLibrary
 Library  DataDriver  file=resources/invalid_login_data.csv  encoding=utf_8  #dailect=unix
-Test Setup  Open chrome to login page
+Test Setup  Open browser of  chrome
 Test Teardown  End session and close browser
 Resource  ../PO/generic.robot
 Resource  ../PO/login_page_mail.robot
