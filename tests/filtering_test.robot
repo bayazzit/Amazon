@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  Login Test
+Documentation  Tests for filtering features
 Library  SeleniumLibrary
 Library  String
 Library  Collections
