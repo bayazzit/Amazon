@@ -3,8 +3,8 @@ Documentation  Tests for filtering features
 Library  SeleniumLibrary
 Library  String
 Library  Collections
-Suite Setup  Open browser of  chrome
-# Suite Teardown  End session and close browser
+Test Setup  Open browser of  chrome
+Test Teardown  Close Browser
 Resource  ../PO/generic.robot
 Resource  ../keywords/all_keywords.robot
 
