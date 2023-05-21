@@ -10,7 +10,6 @@ Resource  ../keywords/all_keywords.robot
 
 *** Variables ***
 ${top_item}  (//a[@class='a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'])[1]
-${price_locator}  price
 
 *** Test Cases ***
 Filter Test for Price
@@ -22,7 +21,7 @@ Filter Test for Price
 
     # Price at most 20
     Select at most 20 price filter
-    Sort as Decreasing Price
+    Sort in Decreasing Price
     Select the top item
     Price should be less than  20
     Go back
@@ -33,7 +32,7 @@ Filter Test for Price
     Select the top item
     Price should be less than  200
     Go back
-    Sort as Increasing Price
+    Sort in Increasing Price
     Select the top item
     #Price should be more than  100
     Go back
@@ -50,42 +49,14 @@ Filter Test for Price
     Filter minimum price at  27
     Filter maximum price at  712
     Apply price filter
-    Sort as Increasing Price
+    Sort in Increasing Price
     Select the top item
     Price should be more than  27
     Go back
-    Sort as Decreasing Price
+    Sort in Decreasing Price
     select the top item
     price should be less than  712
 
 *** Keywords ***
 Select the top item
     wait until keyword succeeds  15 s  3 s  click element  ${top_item}
-
-Price should be less than
-    [Documentation]  Given limit should be an integer
-    [Arguments]  ${upper_limit}
-    ${upper_limit}  convert to integer  ${upper_limit}
-    wait until page contains element  ${price_locator}
-    ${price}  get text  ${price_locator}
-    @{price}  split string  ${price}  ,
-    ${price_beg}  get from list  ${price}  0
-    ${price_end}  get from list  ${price}  1
-    ${price_end}  get substring  ${price_end}  0  2
-    ${price}  catenate  SEPARATOR=.  ${price_beg}  ${price_end}
-    ${price}  convert to number  ${price}
-    should be true  ${price} <= ${upper_limit}
-
-Price should be more than
-    [Documentation]  Given limit should be an integer
-    [Arguments]  ${lower_limit}
-    ${lower_limit}  convert to integer  ${lower_limit}
-    wait until page contains element  ${price_locator}
-    ${price}  get text  ${price_locator}
-    @{price}  split string  ${price}  ,
-    ${price_beg}  get from list  ${price}  0
-    ${price_end}  get from list  ${price}  1
-    ${price_end}  get substring  ${price_end}  0  2
-    ${price}  catenate  SEPARATOR=.  ${price_beg}  ${price_end}
-    ${price}  convert to number  ${price}
-    should be true  ${lower_limit} <= ${price}
