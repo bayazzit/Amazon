@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20230919 20:17:05.082" rpa="false" schemaversion="4">
+<suite id="s1" name="Tests" source="C:\Users\bahadir.bayazit\PycharmProjects\web_automation_learning_path\tests">
+<suite id="s1-s1" name="Adding To Cart" source="C:\Users\bahadir.bayazit\PycharmProjects\web_automation_learning_path\tests\adding_to_cart.robot">
+<kw name="Open browser of" library="generic" type="SETUP">
+<arg>chrome</arg>
+<doc>Browser can be -&gt; (headless)chrome , (headless)firefox</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 20:17:05.485" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<msg timestamp="20230919 20:17:12.806" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:12.806" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</msg>
+<status status="FAIL" starttime="20230919 20:17:05.485" endtime="20230919 20:17:12.806"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:05.485" endtime="20230919 20:17:12.806"/>
+</kw>
+<test id="s1-s1-t1" name="Add a Product to the Cart" line="14">
+<status status="FAIL" starttime="20230919 20:17:12.806" endtime="20230919 20:17:12.806">Parent suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</status>
+</test>
+<kw name="End session and close browser" library="generic" type="TEARDOWN">
+<doc>Ends the session and closes the browser</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:17:12.806" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:12.806" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:12.806" endtime="20230919 20:17:12.822"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:17:12.822" level="INFO">Clicking element 'nav-logo-sprites'.</msg>
+<msg timestamp="20230919 20:17:12.822" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:12.822" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:12.822" endtime="20230919 20:17:12.822"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230919 20:17:13.825" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230919 20:17:12.822" endtime="20230919 20:17:13.825"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${accounts_and_lists_tab}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230919 20:17:13.825" level="INFO">Simulating Mouse Over on element 'nav-link-accountList-nav-line-1'.</msg>
+<msg timestamp="20230919 20:17:13.825" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:13.825" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:13.825" endtime="20230919 20:17:13.825"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:17:13.825" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:13.825" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:13.825" endtime="20230919 20:17:13.825"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:17:13.825" level="INFO">Clicking element 'nav-item-signout'.</msg>
+<msg timestamp="20230919 20:17:13.825" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:13.825" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:13.825" endtime="20230919 20:17:13.825"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 20:17:13.825" endtime="20230919 20:17:13.825"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:12.806" endtime="20230919 20:17:13.825">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</kw>
+<doc>Login Test</doc>
+<status status="FAIL" starttime="20230919 20:17:05.120" endtime="20230919 20:17:13.825">Suite setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+
+
+Also suite teardown failed:
+Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</suite>
+<suite id="s1-s2" name="Filtering Test" source="C:\Users\bahadir.bayazit\PycharmProjects\web_automation_learning_path\tests\filtering_test.robot">
+<test id="s1-s2-t1" name="Filter Test for Price" line="15">
+<kw name="Open browser of" library="generic" type="SETUP">
+<arg>chrome</arg>
+<doc>Browser can be -&gt; (headless)chrome , (headless)firefox</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 20:17:13.884" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<msg timestamp="20230919 20:17:20.103" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:20.103" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</msg>
+<status status="FAIL" starttime="20230919 20:17:13.884" endtime="20230919 20:17:20.103"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:13.884" endtime="20230919 20:17:20.103"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 20:17:20.103" endtime="20230919 20:17:20.103"/>
+</kw>
+<doc>The aim of this test is to check if price filteration is working.</doc>
+<status status="FAIL" starttime="20230919 20:17:13.884" endtime="20230919 20:17:20.103">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</status>
+</test>
+<doc>Tests for filtering features</doc>
+<status status="FAIL" starttime="20230919 20:17:13.833" endtime="20230919 20:17:20.103"/>
+</suite>
+<suite id="s1-s3" name="Invalid Login Test" source="C:\Users\bahadir.bayazit\PycharmProjects\web_automation_learning_path\tests\invalid_login_test.robot">
+<test id="s1-s3-t1" name="invalid username 1,asdfgh,123" line="17">
+<kw name="Open browser of" library="generic" type="SETUP">
+<arg>chrome</arg>
+<doc>Browser can be -&gt; (headless)chrome , (headless)firefox</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 20:17:24.268" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<msg timestamp="20230919 20:17:30.402" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:30.403" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</msg>
+<status status="FAIL" starttime="20230919 20:17:24.268" endtime="20230919 20:17:30.403"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:24.268" endtime="20230919 20:17:30.403"/>
+</kw>
+<kw name="End session and close browser" library="generic" type="TEARDOWN">
+<doc>Ends the session and closes the browser</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:17:30.403" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:30.403" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:30.403" endtime="20230919 20:17:30.403"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:17:30.403" level="INFO">Clicking element 'nav-logo-sprites'.</msg>
+<msg timestamp="20230919 20:17:30.403" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:30.403" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:30.403" endtime="20230919 20:17:30.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230919 20:17:31.412" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230919 20:17:30.403" endtime="20230919 20:17:31.412"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${accounts_and_lists_tab}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230919 20:17:35.495" level="INFO">Simulating Mouse Over on element 'nav-link-accountList-nav-line-1'.</msg>
+<msg timestamp="20230919 20:17:35.495" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:35.495" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:31.412" endtime="20230919 20:17:35.495"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:17:35.495" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:35.495" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:35.495" endtime="20230919 20:17:35.495"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:17:35.495" level="INFO">Clicking element 'nav-item-signout'.</msg>
+<msg timestamp="20230919 20:17:35.495" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:35.495" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:35.495" endtime="20230919 20:17:35.495"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 20:17:35.495" endtime="20230919 20:17:35.495"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:30.403" endtime="20230919 20:17:35.511">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:24.268" endtime="20230919 20:17:35.511">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+
+
+Also teardown failed:
+Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</test>
+<test id="s1-s3-t2" name="invalid username 2,!-?_+%,123" line="17">
+<kw name="Open browser of" library="generic" type="SETUP">
+<arg>chrome</arg>
+<doc>Browser can be -&gt; (headless)chrome , (headless)firefox</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 20:17:35.511" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<msg timestamp="20230919 20:17:41.567" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:41.567" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</msg>
+<status status="FAIL" starttime="20230919 20:17:35.511" endtime="20230919 20:17:41.567"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:35.511" endtime="20230919 20:17:41.567"/>
+</kw>
+<kw name="End session and close browser" library="generic" type="TEARDOWN">
+<doc>Ends the session and closes the browser</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:17:41.567" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:41.567" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:41.567" endtime="20230919 20:17:41.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:17:41.567" level="INFO">Clicking element 'nav-logo-sprites'.</msg>
+<msg timestamp="20230919 20:17:41.567" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:41.567" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:41.567" endtime="20230919 20:17:41.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230919 20:17:42.569" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230919 20:17:41.567" endtime="20230919 20:17:42.569"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${accounts_and_lists_tab}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230919 20:17:50.704" level="INFO">Simulating Mouse Over on element 'nav-link-accountList-nav-line-1'.</msg>
+<msg timestamp="20230919 20:17:50.704" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:50.704" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:42.569" endtime="20230919 20:17:50.705"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:17:50.706" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:50.706" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:50.705" endtime="20230919 20:17:50.706"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:17:50.707" level="INFO">Clicking element 'nav-item-signout'.</msg>
+<msg timestamp="20230919 20:17:50.707" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:50.707" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:50.706" endtime="20230919 20:17:50.708"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 20:17:50.708" endtime="20230919 20:17:50.708"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:41.567" endtime="20230919 20:17:50.708">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:35.511" endtime="20230919 20:17:50.708">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+
+
+Also teardown failed:
+Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</test>
+<test id="s1-s3-t3" name="invalid password 1,valid,123" line="17">
+<kw name="Open browser of" library="generic" type="SETUP">
+<arg>chrome</arg>
+<doc>Browser can be -&gt; (headless)chrome , (headless)firefox</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 20:17:50.714" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<msg timestamp="20230919 20:17:56.844" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:56.844" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</msg>
+<status status="FAIL" starttime="20230919 20:17:50.713" endtime="20230919 20:17:56.844"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:50.713" endtime="20230919 20:17:56.844"/>
+</kw>
+<kw name="End session and close browser" library="generic" type="TEARDOWN">
+<doc>Ends the session and closes the browser</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:17:56.844" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:56.844" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:56.844" endtime="20230919 20:17:56.844"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:17:56.844" level="INFO">Clicking element 'nav-logo-sprites'.</msg>
+<msg timestamp="20230919 20:17:56.844" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:56.844" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:56.844" endtime="20230919 20:17:56.844"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230919 20:17:57.856" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230919 20:17:56.844" endtime="20230919 20:17:57.856"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${accounts_and_lists_tab}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230919 20:17:57.856" level="INFO">Simulating Mouse Over on element 'nav-link-accountList-nav-line-1'.</msg>
+<msg timestamp="20230919 20:17:57.856" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:57.856" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:57.856" endtime="20230919 20:17:57.856"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:17:57.856" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:17:57.856" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:17:57.856" endtime="20230919 20:18:01.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:18:01.936" level="INFO">Clicking element 'nav-item-signout'.</msg>
+<msg timestamp="20230919 20:18:01.936" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:01.936" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:18:01.936" endtime="20230919 20:18:01.936"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 20:18:01.936" endtime="20230919 20:18:01.936"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:56.844" endtime="20230919 20:18:01.936">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</kw>
+<status status="FAIL" starttime="20230919 20:17:50.711" endtime="20230919 20:18:01.936">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+
+
+Also teardown failed:
+Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</test>
+<test id="s1-s3-t4" name="invalid password 2,valid,!+(&amp;/^+" line="17">
+<kw name="Open browser of" library="generic" type="SETUP">
+<arg>chrome</arg>
+<doc>Browser can be -&gt; (headless)chrome , (headless)firefox</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 20:18:01.936" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<msg timestamp="20230919 20:18:07.658" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:07.658" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</msg>
+<status status="FAIL" starttime="20230919 20:18:01.936" endtime="20230919 20:18:07.658"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:18:01.936" endtime="20230919 20:18:07.658"/>
+</kw>
+<kw name="End session and close browser" library="generic" type="TEARDOWN">
+<doc>Ends the session and closes the browser</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:18:07.658" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:07.658" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:18:07.658" endtime="20230919 20:18:07.658"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:18:07.658" level="INFO">Clicking element 'nav-logo-sprites'.</msg>
+<msg timestamp="20230919 20:18:07.658" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:07.658" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:18:07.658" endtime="20230919 20:18:07.658"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230919 20:18:12.757" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230919 20:18:07.658" endtime="20230919 20:18:12.757"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${accounts_and_lists_tab}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230919 20:18:12.757" level="INFO">Simulating Mouse Over on element 'nav-link-accountList-nav-line-1'.</msg>
+<msg timestamp="20230919 20:18:12.757" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:12.757" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:18:12.757" endtime="20230919 20:18:12.757"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230919 20:18:12.757" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:12.757" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:18:12.757" endtime="20230919 20:18:12.757"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230919 20:18:12.757" level="INFO">Clicking element 'nav-item-signout'.</msg>
+<msg timestamp="20230919 20:18:12.757" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:12.757" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230919 20:18:12.757" endtime="20230919 20:18:12.757"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 20:18:12.757" endtime="20230919 20:18:12.757"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:18:07.658" endtime="20230919 20:18:12.757">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</kw>
+<status status="FAIL" starttime="20230919 20:18:01.936" endtime="20230919 20:18:12.757">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+
+
+Also teardown failed:
+Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.</status>
+</test>
+<doc>Invalid Login Test</doc>
+<status status="FAIL" starttime="20230919 20:17:20.103" endtime="20230919 20:18:12.757"/>
+</suite>
+<suite id="s1-s4" name="Sorting Test" source="C:\Users\bahadir.bayazit\PycharmProjects\web_automation_learning_path\tests\sorting_test.robot">
+<test id="s1-s4-t1" name="Sorting Price as Decreasing" line="17">
+<kw name="Open browser of" library="generic" type="SETUP">
+<arg>chrome</arg>
+<doc>Browser can be -&gt; (headless)chrome , (headless)firefox</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 20:18:12.773" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<msg timestamp="20230919 20:18:18.618" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:18.618" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</msg>
+<status status="FAIL" starttime="20230919 20:18:12.773" endtime="20230919 20:18:18.618"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:18:12.773" endtime="20230919 20:18:18.618"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 20:18:18.618" endtime="20230919 20:18:18.618"/>
+</kw>
+<doc>In this test, a group of items will be sorted in decreasing price
+and tested if the sorting is correct or not</doc>
+<status status="FAIL" starttime="20230919 20:18:12.773" endtime="20230919 20:18:18.618">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</status>
+</test>
+<test id="s1-s4-t2" name="Sorting Price as Increasing" line="42">
+<kw name="Open browser of" library="generic" type="SETUP">
+<arg>chrome</arg>
+<doc>Browser can be -&gt; (headless)chrome , (headless)firefox</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230919 20:18:18.618" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<msg timestamp="20230919 20:18:24.794" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20230919 20:18:24.795" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</msg>
+<status status="FAIL" starttime="20230919 20:18:18.618" endtime="20230919 20:18:24.795"/>
+</kw>
+<status status="FAIL" starttime="20230919 20:18:18.618" endtime="20230919 20:18:24.795"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230919 20:18:24.795" endtime="20230919 20:18:24.795"/>
+</kw>
+<doc>In this test, a group of items will be sorted in increasing price
+and tested if the sorting is correct or not</doc>
+<status status="FAIL" starttime="20230919 20:18:18.618" endtime="20230919 20:18:24.795">Setup failed:
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 114
+Current browser version is 116.0.5845.188 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x0070A813+48355]
+	(No symbol) [0x0069C4B1]
+	(No symbol) [0x005A5358]
+	(No symbol) [0x005C61AC]
+	(No symbol) [0x005C1EF3]
+	(No symbol) [0x005C0579]
+	(No symbol) [0x005F0C55]
+	(No symbol) [0x005F093C]
+	(No symbol) [0x005EA536]
+	(No symbol) [0x005C82DC]
+	(No symbol) [0x005C93DD]
+	GetHandleVerifier [0x0096AABD+2539405]
+	GetHandleVerifier [0x009AA78F+2800735]
+	GetHandleVerifier [0x009A456C+2775612]
+	GetHandleVerifier [0x007951E0+616112]
+	(No symbol) [0x006A5F8C]
+	(No symbol) [0x006A2328]
+	(No symbol) [0x006A240B]
+	(No symbol) [0x00694FF7]
+	BaseThreadInitThunk [0x76726839+25]
+	RtlGetFullPathName_UEx [0x77B18F0F+1215]
+	RtlGetFullPathName_UEx [0x77B18EDD+1165]
+</status>
+</test>
+<doc>Tests for filtering features</doc>
+<status status="FAIL" starttime="20230919 20:18:12.767" endtime="20230919 20:18:24.795"/>
+</suite>
+<status status="FAIL" starttime="20230919 20:17:05.082" endtime="20230919 20:18:24.795"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="8" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Adding To Cart">Tests.Adding To Cart</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="Filtering Test">Tests.Filtering Test</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s3" name="Invalid Login Test">Tests.Invalid Login Test</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s4" name="Sorting Test">Tests.Sorting Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

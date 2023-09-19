@@ -1,14 +1,11 @@
-# Set the base image
 FROM  python:3.9
 
-# Set the working directory
 WORKDIR  /app
 
-# Copy the Robot Framework code to the container
-COPY  . /app
+COPY requirements.txt requirements.txt
 
-# Install the dependencies
 RUN pip install -r requirements.txt
 
-# Set the entrypoint
-ENTRYPOINT ["robot"]
+COPY  . /app
+
+CMD  ["robot", "tests"]
