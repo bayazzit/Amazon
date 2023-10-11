@@ -19,6 +19,7 @@ ${delete_button}             //input[@data-action='delete']
 Open browser of
     [Documentation]  Browser can be -> (headless)chrome , (headless)firefox
     [Arguments]  ${browser}
+
     Open Browser  ${login_url}  ${browser}
 
 End session and close browser
