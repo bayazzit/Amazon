@@ -1,0 +1,5 @@
+robotframework==7.0
+robotframework-seleniumlibrary==6.2.0
+robotframework-datadriver==1.7.0
+robotframework-pythonlibcore==4.3.0
+PyYAML>=5.3.1
