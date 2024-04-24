@@ -4,10 +4,27 @@ services:
     image: selenium/hub:latest
     container_name: selenium-hub
     ports:
+    # host:container
       - "4442:4442"
-
+      - "4443:4443"
+      - "4444:4444"
   chrome:
     image: selenium/node-chrome:latest
+    depends_on:
+      - selenium-hub
+    environment:
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+      VNC_NO_PASSWORD: 1 
+      SE_NODE_MAX_INSTANCES: 5 
+      SE_NODE_MAX_SESSION: 5 
+    ports:
+      - "1907:5900"
+    #5900 portu VNC için kullandığımız porttur buraya 5900 vermemiz gerekiyor. host portuna istediğimizi verebiliriz.
+    container_name: chrome
+  edge:
+    image: selenium/node-edge:latest
     depends_on:
       - selenium-hub
     environment:
@@ -18,5 +35,35 @@ services:
       SE_NODE_MAX_INSTANCES: 5
       SE_NODE_MAX_SESSION: 5
     ports:
-      - "1907:5900"
-    container_name: chrome
+      - "1905:5900"
+    container_name: edge
+  firefox:
+    image: selenium/node-firefox:latest
+    depends_on:
+      - selenium-hub
+    environment:
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+      VNC_NO_PASSWORD: 1
+      SE_NODE_MAX_INSTANCES: 5
+      SE_NODE_MAX_SESSION: 5
+    ports:
+      - "1903:5900"
+    container_name: firefox
+  robot-test:
+    image: test-execution
+    build:
+      dockerfile: Dockerfile
+    volumes:
+    #Bunun amacı container üzerinde bulunan dosyaları saklamak içindir.
+    #Container'ı kapatıp tekrar açtığımızda proje dosyalarına ulaşabiliriz.
+    #Working directory olarak tmp ve projenin adını vermiştik burada da şöyle bir absolute path tanımlamamız gerekli.
+      - '../.:/tmp/.'
+    depends_on:
+      - selenium-hub
+    #Bu entrypoint container ayağa kaldırdığımızda çalışacak olan komuttur.
+    #burada da entrypoint olarak dev/null'ı tailliyoruz. dev/null Linux'ta sanal bi path.
+    #İçerisine hangi dosyayı atarsak container silindiğinde bu dosyalarda silinecektir.
+    entrypoint: tail -f /dev/null
+    container_name: test-execution
