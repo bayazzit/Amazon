@@ -18,7 +18,7 @@ Sorting Price as Decreasing
     [Documentation]  In this test, a group of items will be sorted in decreasing price
     ...              and tested if the sorting is correct or not
 
-    # Initialization
+    # Preconditions
     Allow Cookies for Amazon
     Search from search bar to  toy
 
@@ -43,7 +43,7 @@ Sorting Price as Increasing
     [Documentation]  In this test, a group of items will be sorted in increasing price
     ...              and tested if the sorting is correct or not
 
-    # Initialization
+    # Preconditions
     Allow Cookies for Amazon
     Search from search bar to  toy
 
